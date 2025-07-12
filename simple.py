@@ -22,7 +22,7 @@ from langchain_core.messages import HumanMessage, SystemMessage
 # In[2]:
 
 
-TOGETHER_API_KEY = "c7e643b34570d0f22ebce5db30f31ffca7aed28914e1cf2571f312be32f11f0d"
+TOGETHER_API_KEY = ""
 
 chat = ChatTogether(
     together_api_key= TOGETHER_API_KEY,
@@ -58,8 +58,8 @@ def needs_web_search(query, db_results):
 
 # Do the web search 
 def do_web_search(query):
-    api_key = "AIzaSyCiEwX47oyr3VZttBp3j1my1qPSqRuUlRU"
-    cse_id = "2035ef3f1549b49cc"
+    api_key = ""
+    cse_id = ""
     url = f"https://www.googleapis.com/customsearch/v1?q={query}&key={api_key}&cx={cse_id}"
     response = requests.get(url)
     results = response.json()
@@ -85,8 +85,8 @@ def run_query(prompt):
 
 def do_web_search(query):
     print("\nWeb search is being used")
-    api_key = "AIzaSyCiEwX47oyr3VZttBp3j1my1qPSqRuUlRU"
-    cse_id = "2035ef3f1549b49cc"
+    api_key = ""
+    cse_id = ""
     url = f"https://www.googleapis.com/customsearch/v1?q={query}&key={api_key}&cx={cse_id}"
     response = requests.get(url)
     results = response.json()
